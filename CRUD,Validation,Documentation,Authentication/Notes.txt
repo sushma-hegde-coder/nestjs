@@ -29,7 +29,7 @@ One root/main feature : main entry point : APP MODULE
 tables : entities (table def/schema def)
 
 @Decorator() : 
-provides the metadata information to a class
+provides the metadata information to a class..it tells class about its behaviourh
 
 imports : which module you want to use within this
             current module
