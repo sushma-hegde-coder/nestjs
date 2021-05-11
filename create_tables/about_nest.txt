@@ -3,3 +3,7 @@ D- dependency injection - single point of change - just provide mapping..everyth
 
 Path parameter - @Params
 Query parameter - @Query
+
+nest g resource tree
+
+
