@@ -1,2 +1,5 @@
 S - single responsiblitiy- one person should do only one job - one func should do only one task
 D- dependency injection - single point of change - just provide mapping..everything is taken care
+
+Path parameter - @Params
+Query parameter - @Query
