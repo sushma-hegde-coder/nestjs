@@ -121,7 +121,7 @@ D : Dependency injection :
     create a new app : nest new app-name
     creating a CRUD resource : nest g resource resource-name
     
-    /* creating a table CRUD manually */
+    /* creating a a CRUD on table manually */
     create a module : nest g module module-name : nest g module auth
     create a controller : nest g controller controller-name : nest g controller auth
     create a class : nest g class class-name : nest g class auth/entities/user.entity
@@ -133,6 +133,7 @@ D : Dependency injection :
     nest g class auth/dto/create-user.dto
     nest g class auth/dto/login.dto
 
+    /* when you are not using command nest g resource resource-name */
 STEPS
     create the module : FEATURE : AUTHENTICATION
     create the controller : AUTHENTICATION ROUTES
@@ -143,6 +144,9 @@ STEPS
     create the service
     write the bussiness logic of the service
     inject the service in the controller & than we can use the service object functions
+    
+    nest g service auth/user
+    npm i bcrypt,npm i @types
 
     Password : strategies : middlewares : auth-middleware
 
