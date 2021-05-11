@@ -1,9 +1,29 @@
 S - single responsiblitiy- one person should do only one job - one func should do only one task
 D- dependency injection - single point of change - just provide mapping..everything is taken care
 
-Path parameter - @Params
-Query parameter - @Query
+                                                                                        nest g resource tree
 
-nest g resource tree
+     Express                                                                                                                  Nest
+1. create model for tree, define the schema                                  already created tree.entity.ts, import typeorm code and use it...define the schema
+2. create controller, write logic ie functions                               already tree.service.ts is there, write logic 
+     created model,exported and used in controller user.find()                   create repository object and use it for inbuilt functions treeRepository.find()
+3. in router specify the route, on entering this path call this func         already tree.controller.ts is created, no need to specify anything. It has all routes available
+4. import router in server.js                                                register entity "tree" in tree.module.ts. Check in app.module.ts if TreeModule is imported
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
