@@ -121,6 +121,7 @@ D : Dependency injection :
     create a new app : nest new app-name
     creating a CRUD resource : nest g resource resource-name
     
+    /* creating a table CRUD manually */
     create a module : nest g module module-name : nest g module auth
     create a controller : nest g controller controller-name : nest g controller auth
     create a class : nest g class class-name : nest g class auth/entities/user.entity
