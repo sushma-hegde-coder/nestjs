@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity({ name: 'my_tree' }) //here I changed name of table tree as my_tree this is optional, if you want to have table as it is leave it
+@Entity({ name: 'my_tree' }) //here I changed name of table tree as my_tree if you want to have same name give it as 'tree'
 export class Tree {
   @PrimaryGeneratedColumn()
   treeId: number;
