@@ -1,0 +1,10 @@
+use Passportjs- gives different strategies to use in your application, it will not give any login facility.
+      gives facility to not break your head on logic, which url is private, compare token using secrete key, decode it, storing it in locals
+      
+strategy is a functionality applicable for entire application like a middleware
+      
+Token - all necessary info of token like expiration time --2 ways
+             either enter it in sign(options...) 
+             or define it globally....wherever jwt is signed, this configuration will be taken automatically
+
+     
