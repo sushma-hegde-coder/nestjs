@@ -27,7 +27,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     //it will go and sit inside req object's body as req.user key's value
     //I'm setting req.user property with this value
     //store the info got from token in variables, these variables can be used throughout the program
-    //thes variables are valid till the request is available(till )
+    //these variables are valid till the request is available(till )
+     //can use userService directly and instead of returning the object, 
+     //return this.userService.findById(payload.status); /*if the user account is deactivated status is active or inactive, he is not allowed
+    //this is a  promise ....if I reject the promise, it will go as status code 401
   }
   //this is the implementation of middleware
   //use this middleware

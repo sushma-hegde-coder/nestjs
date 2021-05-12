@@ -52,10 +52,10 @@ export class AuthService {
     return this.validateBotanist(loginDto).then((botanist) => {
       //validate user---have written a function for this which is made private
       //generate token
-      const payload = { sub: botanist.botId, email: botanist.botEmail };
+      const payload = { sub: botanist.botId, email: botanist.botEmail };//at client side you can't decode the token, but can paste it in jwt.io so in payload sensitive info should not be there
       const token = this.jwtService.sign(payload); //can have options when it expires etc.
       //there are
-      console.log(token);
+      console.log(token); 
       //no need to keep it as separate because it is already written in a separate service
       return Promise.resolve({
         //this is response body
