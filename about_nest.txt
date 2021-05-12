@@ -148,7 +148,7 @@ STEPS
     nest g service auth/user
     npm i bcrypt,npm i @types
 
-    Password : strategies : middlewares : auth-middleware
+    Passport : strategies : middlewares : auth-middleware
 
     Public : no token
     Protected : token is required : GUARDS
