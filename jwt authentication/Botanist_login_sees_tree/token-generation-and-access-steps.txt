@@ -18,7 +18,7 @@ if you want all routes of tree(product) to be protected use @UseGuards
 
 ttl : in min
 
-
+only dist folder will be deployed
 
 
      
