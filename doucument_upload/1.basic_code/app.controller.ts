@@ -1,4 +1,5 @@
 //install multer and write only in controller, nothing is required
+//multar takes all files --mp3, image,docs, word, mp4 etc etc 
 import {
   Controller,
   Get,
