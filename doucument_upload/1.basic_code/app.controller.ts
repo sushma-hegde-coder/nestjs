@@ -1,3 +1,4 @@
+//install multer and write only in controller, nothing is required
 import {
   Controller,
   Get,
