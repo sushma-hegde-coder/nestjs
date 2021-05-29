@@ -40,7 +40,6 @@ export class AppController {
     FilesInterceptor('image', 20, {
       storage: diskStorage({
         destination: './uploads/images',
-
         //give the filename before it is getting stored in folder
         filename: (req: any, file: any, cb: any) => {
           const firstName = 'master-image'; //I'm giving name of the file as meta-doc-image..you have to write is inside a variable, you can't directly write string
