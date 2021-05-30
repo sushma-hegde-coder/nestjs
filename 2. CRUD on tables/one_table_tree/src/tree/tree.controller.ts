@@ -14,17 +14,20 @@ import { UpdateTreeDto } from './dto/update-tree.dto';
 @Controller('tree')
 export class TreeController {
   constructor(private readonly treeService: TreeService) {}
-
+  
+  //http://localhost:3000/tree         select post method in postman
   @Post()
   create(@Body() createTreeDto: CreateTreeDto) {
     return this.treeService.create(createTreeDto);
   }
-
+  
+  //http://localhost:3000/tree    select get method in postman
   @Get()
   findAll() {
     return this.treeService.findAll();
   }
 
+ // http://localhost:3000/tree/1000  
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.treeService.findOne(+id);
