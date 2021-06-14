@@ -1,0 +1,31 @@
+select * from employee
+let data= await getRepository(Employee).createQueryBuilder("employee").getMany();    -------it doesn't matter what you write in place of "employee" even if it is empty it returns all columns of employee
+res.send(data)                                                                       -----since here u have used getRepository(Employee) it takes Employee table 
+ 
+let data= await getRepository(Employee).createQueryBuilder("emp").select().getMany()  
+res.send(data) 
+ 
+select id from employee
+let data= await getRepository(Employee).createQueryBuilder("employee").select("employee.id").getMany() ---in select write whatever written inside here employee object then dot col name
+res.send(data)                                                                                                      ---employee.firstName, employee.lastName
+
+select firstName,lastName from employee
+let data= await getRepository(Employee).createQueryBuilder("emp"). .select(["emp.firstName","emp.lastName"]).getMany()   --emp is alias name--compulsory to give it inside query builder if you want to retreive only some columns
+res.send(data)
+
+select * from employee where firstName="sushma"
+let data= await getRepository(Employee).createQueryBuilder("emp").select().where("emp.firstName=:query",{ query: "sushma"}).getMany()
+console.log("repo",data)
+res.send(data)
+
+select firstName,lastName from employee where firstName="sushma"
+let data= await getRepository(Employee).createQueryBuilder("emp").select(["emp.firstName","emp.lastName"].where("emp.firstName=:firstName",{ firstName: "sushma"}.getMany()
+ 
+ 
+  
+    
+   
+    
+  
+ 
+ 
