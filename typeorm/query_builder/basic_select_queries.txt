@@ -27,6 +27,15 @@ let data= await getRepository(Employee).createQueryBuilder("emp").select(["emp.f
   you get array for getMany, can access elements using data[0].id
   you get object for getOne, can access elements using data.id
   
+  
+  Count - 
+   let candidateCount = await getRepository(Candidate)
+      .createQueryBuilder("candidate")
+      .select("COUNT(candidate.id)", "candCount")
+      .where("candidate.recruiterId=:recId", { recId: recruiterId })
+      .getRawOne();
+    return candidateCount;
+  
     
   
  
