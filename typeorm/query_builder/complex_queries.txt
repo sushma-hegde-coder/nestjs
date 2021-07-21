@@ -1,0 +1,21 @@
+In -
+let rejectedDocs = await getRepository(Document)
+      .createQueryBuilder("doc")
+      .select(["doc.documentName", "doc.remarks"])
+      .where("doc.status IN(:...statusCode)", {
+        statusCode: ["RR", "HRR"],
+      })
+      .andWhere("doc.userId = :uId", { uId: userId })
+      .getMany();
+    return rejectedDocs;
+    
+ And-
+ let fileName = await getRepository(Document)
+    .createQueryBuilder("document")
+    .select([
+      "document.fileName",     
+    ])
+    .where("document.userId=:userId", { userId: uId })
+    .andWhere("document.documentName=:docName",{docName:docName})
+    .getOne();
+  return fileName;
