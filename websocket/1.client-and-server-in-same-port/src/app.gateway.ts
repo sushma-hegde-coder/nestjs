@@ -8,6 +8,7 @@ import { Socket,Server } from 'socket.io';
 export class AppGateway implements OnGatewayInit,OnGatewayConnection,OnGatewayDisconnect{
   private logger:Logger=new Logger("AppGateway")
 
+  //if I want to send return message to all the clients registered to server, then use this decorator
   @WebSocketServer() wss:Server;
 
   afterInit(server:Server){
