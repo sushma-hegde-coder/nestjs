@@ -1,0 +1,2 @@
+nest new project-name
+nest g resource 
