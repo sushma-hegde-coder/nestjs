@@ -1,1 +1,2 @@
 https://optimalbits.github.io/bull/
+https://medium.com/@vishnuit18/job-scheduling-in-nodejs-using-bull-queue-system-based-on-redis-4c21a93b9283
