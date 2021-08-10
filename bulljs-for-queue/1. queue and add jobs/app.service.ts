@@ -31,7 +31,7 @@ export class AppService {
 
     myFirstQueue.on('completed', (job, result) => {
       console.log(
-        `Job with id ${job.id} has been completed with result ${result}`,
+        `Job with id ${job.id} and name ${job.name} has been completed with result ${result}`,
       );
     });
   }
