@@ -1,3 +1,4 @@
 https://optimalbits.github.io/bull/
+https://www.npmjs.com/package/bull
 https://medium.com/@vishnuit18/job-scheduling-in-nodejs-using-bull-queue-system-based-on-redis-4c21a93b9283
 ---------open redis-server in downloads and run bull project
