@@ -20,6 +20,7 @@ export class AppService {
   }
   getHello() {
     console.log('in service');
+                        //<ReturnType,ParamType>(pattern,param)
     return this.client.send<string, string>('display-hello', '');
   }
 }
