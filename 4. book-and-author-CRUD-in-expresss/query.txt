@@ -1,0 +1,12 @@
+mutation{
+ updateBook(bookId: 1,name:"harry",authorId:3){
+  id
+ }
+}
+
+mutation{
+  removeBook(bookId:1){
+   id
+  }
+}
+
