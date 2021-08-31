@@ -1,0 +1,47 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @key(fields: String!) on OBJECT | INTERFACE
+
+directive @extends on OBJECT | INTERFACE
+
+directive @external on OBJECT | FIELD_DEFINITION
+
+directive @requires(fields: String!) on FIELD_DEFINITION
+
+directive @provides(fields: String!) on FIELD_DEFINITION
+
+type Owner {
+  id: ID!
+  name: String!
+  city: String!
+  phonenumber: String!
+  email: String!
+}
+
+type Query {
+  Allowner: [Owner!]!
+  owner(id: String!): Owner!
+}
+
+type Mutation {
+  createOwner(createOwnerInput: CreateOwnerInput!): Owner!
+  updateOwner(updateOwnerInput: UpdateOwnerInput!): Owner!
+  removeOwner(id: String!): Owner!
+}
+
+input CreateOwnerInput {
+  name: String!
+  city: String!
+  phonenumber: String!
+  email: String!
+}
+
+input UpdateOwnerInput {
+  name: String
+  city: String
+  phonenumber: String
+  email: String
+  id: String!
+}
