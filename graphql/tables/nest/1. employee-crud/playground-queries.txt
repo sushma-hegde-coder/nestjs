@@ -1,0 +1,38 @@
+post- 
+mutation{
+  createEmployee(createEmployeeInput:{name:"sush",email:"si@g.com",age:100}){
+    id
+  }
+}
+
+get all-
+query{
+  emp{
+    name
+    email    
+  }
+}
+
+get one-
+query{
+  employee(id:100){
+    id
+    name
+  }
+}
+
+update- 
+mutation{
+  updateEmployee(updateEmployeeInput:{id:100,name:"sushmahe",email:"sids@g.com",age:45}){
+  __typename  
+  }
+}
+
+delete- 
+mutation{
+  removeEmployee(id:17){
+  __typename  
+  }
+}
+
+

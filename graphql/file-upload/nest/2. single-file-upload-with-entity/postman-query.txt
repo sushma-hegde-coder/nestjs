@@ -1,0 +1,7 @@
+In postman 
+http://localhost:3000/graphql
+body select form-data 
+operations => { "query": "mutation ($file: Upload!) { singleFileUpload(file: $file) }", "variables": { "file": null }}
+map => { "0": ["variables.file"] }
+0 => upload the file
+

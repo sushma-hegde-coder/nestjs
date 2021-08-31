@@ -1,0 +1,11 @@
+nest new project-name
+npm i @nestjs/graphql graphql graphql-tools apollo-server-express
+npm install --save @nestjs/typeorm typeorm pg
+nest g resource employee    --- whole thing ..select GraphQL code first
+---OR-----
+nest g module employee
+nest g service employee --no-spec     /   nest g s employee --no-spec
+nest g resolver employee --no-spec    /  nest g r employee --no-spec
+create entities folder inside that create employee.entity.ts
+
+

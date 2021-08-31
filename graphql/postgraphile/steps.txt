@@ -1,0 +1,5 @@
+1. install globally - npm install -g postgraphile
+2. npx postgraphile -c "postgres://user:pass@localhost/mydb" --watch --enhance-graphiql --dynamic-json
+   no need to have any sql queries or typeorm entities
+   if you have any table in postgresql you can get CRUD operation for that table
+   npx postgraphile -c "postgres://postgres:root@localhost/emp" --watch --enhance-graphiql --dynamic-json

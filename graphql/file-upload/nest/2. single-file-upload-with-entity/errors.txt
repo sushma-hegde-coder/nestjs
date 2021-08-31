@@ -1,0 +1,4 @@
+1. uploads: false -> error in AppModule when you try to disable default upload, 
+   Ctrl select GraphQLModule, go further to forRoot
+   in gql-module-options.interface.d add uploads?:boolean
+   

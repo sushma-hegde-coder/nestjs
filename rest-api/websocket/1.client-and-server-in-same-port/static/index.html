@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket Client</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<!--in developer tools if you write app.title, app.text --can change from developer tool -->
+
+<body>
+    <div id="v-app">
+        <h1>{{ title }}</h1>
+        <form>
+            <input v-model="text" type="text" />
+            <button type="submit" @click.prevent="sendMessage()">send</button>
+        </form>
+        <p>
+        <ul>
+            <li v-for="msg of messages">{{ msg }}</li>
+        </ul>
+        </p>
+    </div>
+
+    <script>
+        var app = new Vue({  //creats new instance and stores in app variable
+            el: "#v-app", //area where vue controls
+            data: {
+                title: "Websocket tester",
+                text: '',
+                messages: ['some message', 'another message'],
+                socket: null
+            },
+            methods: {
+                sendMessage() {
+                    console.log(`send: ${this.text}`)
+                    this.socket.emit('msgToServer', this.text)
+                    this.text = ""
+                },
+                receiveMessage(messg) {
+                    console.log("mesage received is", messg)
+                    console.log(`recv: ${messg}`)
+                    this.messages.push(messg)
+                }
+            },
+            //when boots create() hook runs 
+            created() {
+                console.log("in socket created")
+                this.socket = io("http://localhost:3000") //creates socket io client and stick it on to this.client
+                this.socket.on('msgToClient', (msg) => { //whenever you receive a message pass it to receiveMessage
+                    console.log("message entered in textbox is", msg)
+                    this.receiveMessage(msg)
+                })
+            }
+        })
+
+    </script>
+</body>
+
+</html>
