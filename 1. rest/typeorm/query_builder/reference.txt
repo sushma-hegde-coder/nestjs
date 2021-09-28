@@ -1,4 +1,4 @@
 https://dev.to/yoshi_yoshi/typeorm-query-builder-with-subquery-490c
 https://github.com/typeorm/typeorm/blob/master/docs/select-query-builder.md
-https://github.com/typeorm/typeorm/blob/master/docs/select-query-builder.md
+https://orkhan.gitbook.io/typeorm/docs/find-options
 https://www.bookstack.cn/read/TypeORM/select-query-builder.md
