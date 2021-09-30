@@ -1,0 +1,14 @@
+ countOfPostsForCategories = await this.postRepo                                  ---> gives records where createdAt is exactly matches date and time
+        .createQueryBuilder('post')
+        .select(['post.categoryId', 'COUNT(post.id)'])
+        .where('post.createdAt = :from', { from: "2021-09-29 15:39:37" })
+        .getRawMany();
+        
+ countOfPostsForCategories = await this.postRepo                                  ---> gives records where createdAt is between from date and to date
+       .createQueryBuilder('post')                                                     for ex fromDate-> 2021-09-25          toDate-> 2021-09-30
+      .select(['post.categoryId', 'COUNT(post.id)'])                                   give records whose createdAt field is greater than or equal to 2021-09-25 00:00:00 and 
+      .where('post.createdAt >= :from', { from: fromDate })                            less than or equal to 2021-09-30 00:00:00
+      .andWhere('post.createdAt <= :to', { to: toDate })
+      .groupBy('post.categoryId')
+      .orderBy('post.categoryId', 'ASC')
+      .getRawMany();
