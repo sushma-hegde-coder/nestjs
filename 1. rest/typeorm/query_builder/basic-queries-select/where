@@ -1,0 +1,16 @@
+AND-
+1) .select(['post.categoryId', 'COUNT(post.id)'])
+   .where('post.createdAt >= :from', { from: fromDate })
+   .andWhere('post.createdAt <= :to', { to: toDate })
+   
+2) .where('post.title = :title AND post.details = :details', { title:title, details:details })
+
+
+OR
+1) .select(['post.categoryId', 'COUNT(post.id)'])
+   .where('post.createdAt >= :from', { from: fromDate })
+   .orWhere('post.createdAt <= :to', { to: toDate })
+       
+2. .where('post.title = :title OR post.details = :details', { title:title, details:details })
+ 
+ 
